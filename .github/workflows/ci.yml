@@ -1,0 +1,61 @@
+name: Verificações
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    name: PHP e MySQL
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      DB_HOST: 127.0.0.1
+      DB_PORT: 3306
+      DB_USERNAME: central
+      DB_PASSWORD: central_local
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_DATABASE: central_solicitacoes_test
+          MYSQL_USER: central
+          MYSQL_PASSWORD: central_local
+          MYSQL_ROOT_PASSWORD: root_local
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h127.0.0.1 -uroot -proot_local --silent"
+          --health-interval=5s
+          --health-timeout=5s
+          --health-retries=20
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Preparar PHP
+        uses: shivammathur/setup-php@eb7c497e18156a6bbabfef1d3a82760b9eda3962 # 2.40.0
+        with:
+          php-version: '8.3'
+          extensions: mbstring, pdo_mysql, dom, xml, curl, zip
+          tools: composer:v2
+          coverage: none
+      - name: Instalar dependências
+        run: composer install --no-interaction --prefer-dist --no-progress
+      - name: Preparar o ambiente de testes
+        run: |
+          cp .env.example .env
+          cp .env.testing.example .env.testing
+          php artisan key:generate --no-interaction
+          php artisan key:generate --env=testing --no-interaction
+          php artisan migrate --env=testing --force --no-interaction
+      - name: Validar o Composer
+        run: composer validate --strict
+      - name: Verificar formatação
+        run: composer lint
+      - name: Executar testes
+        run: composer test

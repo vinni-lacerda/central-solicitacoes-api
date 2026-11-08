@@ -19,7 +19,7 @@ No pull request, `Closes #1` associa a entrega à issue e permite fechá-la quan
 
 A mentoria ajuda a entender a demanda, investigar o código, formular hipóteses e revisar decisões. Por padrão, oferece perguntas e pistas; a implementação continua com você. Uma solução completa pode ser apresentada quando você a pedir explicitamente.
 
-Novos testes automatizados serão introduzidos aos poucos. Enquanto esse assunto estiver sendo aprendido, registre as verificações manuais da issue e mantenha os testes existentes passando. Execute as verificações locais antes de enviar a alteração para revisão.
+Novos testes automatizados serão introduzidos aos poucos. Enquanto esse assunto estiver sendo aprendido, registre as verificações manuais da issue e mantenha os testes existentes passando. As verificações do GitHub Actions complementam a conferência local.
 
 ## Convenções iniciais
 

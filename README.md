@@ -93,7 +93,7 @@ composer lint
 composer format
 ```
 
-Execute essas verificações antes de enviar uma alteração para revisão. A execução automática no GitHub Actions poderá ser adicionada em uma próxima etapa.
+O repositório inclui um workflow do GitHub Actions para executar as verificações em novas alterações. O resultado de cada execução pode ser consultado na aba **Actions** do GitHub.
 
 ## Como estudar neste projeto
 
