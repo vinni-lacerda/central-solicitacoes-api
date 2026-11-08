@@ -99,13 +99,16 @@ O repositório inclui um workflow do GitHub Actions para executar as verificaç�
 
 O primeiro ciclo está dividido em 14 issues pequenas sobre categorias e solicitações. Os critérios de aceite descrevem o comportamento esperado; a implementação fica a cargo de quem está estudando. A mentoria ajuda com investigação, pistas e revisão de código.
 
+O [roteiro completo](docs/roteiro-de-estudo.md) reúne 62 issues em cinco ciclos. Depois dos fundamentos, a trilha passa por testes e consultas, regras e comentários, usuários e permissões, e filas e exportações. As etapas futuras são planejadas e podem ser revistas conforme o aprendizado.
+
 Comece pela primeira issue e respeite as dependências indicadas antes de avançar. Leia:
 
 - [Escopo inicial e contratos da API](docs/escopo-inicial.md).
 - [Ordem das primeiras issues](docs/backlog.md).
+- [Roteiro completo e próximos ciclos](docs/roteiro-de-estudo.md).
 - [Fluxo de desenvolvimento e revisão](docs/fluxo-de-trabalho.md).
 
-Login, permissões, paginação, histórico, filas e integrações pertencem a ciclos futuros. O material usa regras próprias e dados fictícios.
+Login, permissões, paginação, histórico, filas e exportações pertencem aos ciclos futuros descritos no roteiro. O material usa regras próprias e dados fictícios.
 
 ## Referências
 
