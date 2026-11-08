@@ -1,3 +1,8 @@
 <?php
 
 // As rotas de categorias e solicitações serão desenvolvidas nas issues.
+
+use App\Http\Controllers\CategoryController;
+use Illuminate\Support\Facades\Route;
+
+Route::post('/categories', [CategoryController::class, 'store']);
