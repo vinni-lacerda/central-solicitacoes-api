@@ -1,6 +1,6 @@
 # Roteiro de estudo
 
-O projeto tem **62 issues planejadas**, divididas em cinco ciclos: 32 fáceis, 28 intermediárias e 2 difíceis. As 14 primeiras continuam sendo o ponto de partida. Os ciclos seguintes são uma proposta de evolução e podem ser ajustados conforme o código desenvolvido e a autonomia no aprendizado.
+O projeto tem **86 issues planejadas**, divididas em seis ciclos: 46 fáceis, 38 intermediárias e 2 difíceis. As 14 primeiras continuam sendo o ponto de partida. Os ciclos seguintes são uma proposta de evolução e podem ser ajustados conforme o código desenvolvido e a autonomia no aprendizado.
 
 Estas issues descrevem funcionalidades a implementar. A publicação do backlog não significa que elas já existam na aplicação.
 
@@ -21,6 +21,7 @@ Estas issues descrevem funcionalidades a implementar. A publicação do backlog 
 | [3 — Regras e comentários](https://github.com/vinni-lacerda/central-solicitacoes-api/milestone/3) | 12 | 10 | 2 | 0 |
 | [4 — Usuários e permissões](https://github.com/vinni-lacerda/central-solicitacoes-api/milestone/4) | 12 | 2 | 10 | 0 |
 | [5 — Filas e exportações](https://github.com/vinni-lacerda/central-solicitacoes-api/milestone/5) | 12 | 0 | 10 | 2 |
+| [6 — Frontend essencial com Vue](https://github.com/vinni-lacerda/central-solicitacoes-api/milestone/6) | 24 | 14 | 10 | 0 |
 
 ## Como os contratos evoluem
 
@@ -113,6 +114,14 @@ Processar trabalho fora da requisição HTTP, acompanhar exportações privadas 
 | 60 | [#60 — Tratar conteúdo textual perigoso no CSV para abertura em planilhas](https://github.com/vinni-lacerda/central-solicitacoes-api/issues/60) | Média | [#55](https://github.com/vinni-lacerda/central-solicitacoes-api/issues/55) |
 | 61 | [#61 — Criar um comando para remover arquivos de exportações vencidas](https://github.com/vinni-lacerda/central-solicitacoes-api/issues/61) | Difícil | [#54](https://github.com/vinni-lacerda/central-solicitacoes-api/issues/54), [#55](https://github.com/vinni-lacerda/central-solicitacoes-api/issues/55), [#58](https://github.com/vinni-lacerda/central-solicitacoes-api/issues/58), [#59](https://github.com/vinni-lacerda/central-solicitacoes-api/issues/59) |
 | 62 | [#62 — Agendar a limpeza diária e documentar a operação local](https://github.com/vinni-lacerda/central-solicitacoes-api/issues/62) | Média | [#51](https://github.com/vinni-lacerda/central-solicitacoes-api/issues/51), [#61](https://github.com/vinni-lacerda/central-solicitacoes-api/issues/61) |
+
+## Ciclo 6 — Frontend essencial com Vue
+
+Construir uma interface Vue 3 no mesmo repositório, começando por componentes estáticos e avançando para o consumo da API. São 24 pequenas entregas, sem tarefas difíceis: listas, formulários, autenticação, comentários, categorias e exportações.
+
+O frontend terá JavaScript e Vite em `frontend/`, com chamadas à API Laravel pelo proxy de desenvolvimento. A pasta e as telas serão implementadas nas issues. A progressão preserva o backend como foco do estudo.
+
+[Abrir as issues deste ciclo](https://github.com/vinni-lacerda/central-solicitacoes-api/milestone/6) ou consultar a [ordem detalhada e decisões do frontend](ciclo-6-frontend.md).
 
 ## Referências de trabalho
 

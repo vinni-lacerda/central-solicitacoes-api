@@ -21,4 +21,4 @@ Desenvolva uma issue por vez, na ordem abaixo. Cada issue publicada contém cont
 
 Todas estão no [milestone Ciclo 1 — Fundamentos](https://github.com/vinni-lacerda/central-solicitacoes-api/milestone/1). A base inicial ainda não implementa esses exercícios.
 
-Os próximos quatro ciclos estão planejados no [roteiro completo](roteiro-de-estudo.md), com mais 48 issues de dificuldade gradual. Eles serão implementados e, quando necessário, ajustados conforme o avanço no aprendizado.
+Os próximos cinco ciclos estão planejados no [roteiro completo](roteiro-de-estudo.md), com mais 72 issues de dificuldade gradual, incluindo o frontend em Vue. Eles serão implementados e, quando necessário, ajustados conforme o avanço no aprendizado.
