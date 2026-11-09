@@ -29,7 +29,7 @@ class CategoryController extends Controller
         ], 201);
     }
 
-    public function index() : array
+    public function index(): array
     {
         return ['data' => Category::orderBy('id')->get()];
     }
