@@ -33,4 +33,16 @@ class CategoryController extends Controller
     {
         return ['data' => Category::orderBy('id')->get()];
     }
+
+    public function find(int $id): JsonResponse
+    {
+        $category = Category::find($id);
+        if ($category === null) {
+            abort(404, 'Categoria não encontrada');
+        }
+        // $data = ['data' => Category::find($id)];
+        // $data === null ? abort(404, 'Categoria não encontrada') : $data;
+
+        return response()->json(['data' => $category]);
+    }
 }
