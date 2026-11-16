@@ -10,3 +10,5 @@ Route::post('/categories', [CategoryController::class, 'store']);
 Route::get('/categories', [CategoryController::class, 'index']);
 
 Route::get('/categories/{id}', [CategoryController::class, 'find']);
+
+Route::patch('/categories/{id}', [CategoryController::class, 'updateCategory']);
