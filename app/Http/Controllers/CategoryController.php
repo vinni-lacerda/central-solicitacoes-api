@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class CategoryController extends Controller
 {
@@ -38,7 +39,7 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
         if ($category === null) {
-            abort(404, 'Categoria não encontrada');
+            abort(404, 'Category not found');
         }
         // $data = ['data' => Category::find($id)];
         // $data === null ? abort(404, 'Categoria não encontrada') : $data;
@@ -59,5 +60,16 @@ class CategoryController extends Controller
         $category->save();
 
         return response()->json(['data' => $category]);
+    }
+
+    public function deleteCategory(int $id): Response
+    {
+        $category = Category::find($id);
+        if ($category === null) {
+            return response()->json(['message' => 'Category not found'], 404);
+        }
+        $category->delete();
+
+        return response('', 204);
     }
 }
