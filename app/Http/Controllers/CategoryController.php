@@ -45,4 +45,19 @@ class CategoryController extends Controller
 
         return response()->json(['data' => $category]);
     }
+
+    public function updateCategory(int $id, Request $request): JsonResponse
+    {
+        $category = Category::findOrFail($id);
+
+        $data = $request->validate([
+            'name' => ['required', 'string', 'max:100'],
+        ]);
+
+        $category->name = $data['name'];
+
+        $category->save();
+
+        return response()->json(['data' => $category]);
+    }
 }
