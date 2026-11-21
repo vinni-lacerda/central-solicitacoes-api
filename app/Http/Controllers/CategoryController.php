@@ -68,6 +68,11 @@ class CategoryController extends Controller
         if ($category === null) {
             return response()->json(['message' => 'Category not found'], 404);
         }
+
+        if ($category->tickets()->exists()) {
+            return response()->json(['message' => 'This category cannot be deleted because it has linked tickets.'], 409);
+        }
+
         $category->delete();
 
         return response('', 204);
