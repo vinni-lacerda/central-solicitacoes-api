@@ -33,4 +33,25 @@ class TicketController extends Controller
             ],
         ], 201);
     }
+
+    public function findTicket(int $id): JsonResponse
+    {
+        $ticket = Ticket::find($id);
+
+        if (is_null($ticket) || $ticket === '') {
+            abort(404, 'Ticket not found');
+        }
+
+        return response()->json(['data' => $ticket]);
+        // return response()->json([
+        //     'data' => [
+        //         'id' => $ticket->id,
+        //         'title' => $ticket->title,
+        //         'description' => $ticket->description,
+        //         'category_id' => $ticket->category_id,
+        //         'created_at' => $ticket->created_at,
+        //         'updated_at' => $ticket->updated_at
+        //     ]
+        // ]);
+    }
 }
