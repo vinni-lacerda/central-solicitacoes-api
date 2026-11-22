@@ -54,4 +54,11 @@ class TicketController extends Controller
         //     ]
         // ]);
     }
+
+    public function indexTicket(): JsonResponse
+    {
+        $ticket = Ticket::orderBy('id', 'asc')->get();
+
+        return response()->json(['data' => $ticket]);
+    }
 }
