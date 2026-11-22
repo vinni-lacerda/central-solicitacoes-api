@@ -17,3 +17,5 @@ Route::patch('/categories/{id}', [CategoryController::class, 'updateCategory']);
 Route::delete('categories/{id}', [CategoryController::class, 'deleteCategory']);
 
 Route::post('/tickets', [TicketController::class, 'storeTicket']);
+
+Route::get('/tickets/{id}', [TicketController::class, 'findTicket'])->whereNumber('id');
